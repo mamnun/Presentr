@@ -25,7 +25,7 @@ enum ExampleSection {
     var items: [ExampleItem] {
         switch self {
         case .alert:
-            return [.alertDefault, .alertCustom, .alertWithout]
+            return [.alertDefault, .alertCustom, .alertWithout, .bottomDynamicSize]
         case .popup:
             return [.popupDefault, .popupCustom]
         case .topHalf:
@@ -46,6 +46,7 @@ enum ExampleItem: String {
     case alertDefault = "Alert with default animation"
     case alertCustom = "Alert with custom animation"
     case alertWithout = "Alert without animation"
+    case bottomDynamicSize = "Dynamic sizing in bottom"
 
     case popupDefault = "Popup with default animation"
     case popupCustom = "Popup with custom animation"
@@ -76,6 +77,8 @@ enum ExampleItem: String {
             return #selector(MainTableViewController.alertCustom)
         case .alertWithout:
             return #selector(MainTableViewController.alertDefaultWithoutAnimation)
+        case .bottomDynamicSize:
+            return #selector(MainTableViewController.bottomDynamicSize)
 
         case .popupDefault:
             return #selector(MainTableViewController.popupDefault)
@@ -270,6 +273,24 @@ extension MainTableViewController {
         presenter.presentationType = .alert
         presenter.dismissAnimated = false
         customPresentViewController(presenter, viewController: alertController, animated: false)
+    }
+    
+    @objc func bottomDynamicSize() {
+        let presenter = Presentr(presentationType: .fullScreen)
+        presenter.transitionType = .crossDissolve
+        presenter.dismissTransitionType = .crossDissolve
+        presenter.dismissAnimated = true
+        let actionSheet = UIStoryboard(name: "dynamic", bundle: nil).instantiateViewController(withIdentifier: "DynamicSizeViewController") as! DynamicSizeViewController
+        actionSheet.message = "This request will be incinerated and the recipient will no longer be able to view or fulfil it"
+        actionSheet.addAction(DynamicSizeViewController.Action(title: "Delete Request", style: .style1, handler: { action in
+            print("Deleted")
+        }))
+        actionSheet.addAction(DynamicSizeViewController.Action(title: "Cancel", style: .style2, handler: { action in
+            actionSheet.dismiss(animated: true)
+        }))
+        //self.modalTransitionStyle = UIModalPresentationOverCurrentContext
+        //present(actionSheet, animated: false, completion: nil)
+        customPresentViewController(presenter, viewController: actionSheet, animated: true, completion: nil)
     }
 
     // MARK: Popup

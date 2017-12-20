@@ -20,6 +20,8 @@
 		06A1F0BB1CF3D17E0057C79B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A1F0BA1CF3D17E0057C79B /* Assets.xcassets */; };
 		06A1F0BE1CF3D17E0057C79B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A1F0BC1CF3D17E0057C79B /* LaunchScreen.storyboard */; };
 		25591534D92612E66093237C /* Pods_PresentrExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9985464B38C3FFC83D568727 /* Pods_PresentrExample.framework */; };
+		37F9F7841FEA256E0020C753 /* DynamicSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9F7831FEA256E0020C753 /* DynamicSizeViewController.swift */; };
+		37F9F7861FEA25940020C753 /* dynamic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F9F7851FEA25940020C753 /* dynamic.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +53,8 @@
 		06A1F0BD1CF3D17E0057C79B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06A1F0BF1CF3D17E0057C79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D9A1F9F4161E3588659C3CF /* Pods-PresentrExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PresentrExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-PresentrExample/Pods-PresentrExample.release.xcconfig"; sourceTree = "<group>"; };
+		37F9F7831FEA256E0020C753 /* DynamicSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSizeViewController.swift; sourceTree = "<group>"; };
+		37F9F7851FEA25940020C753 /* dynamic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = dynamic.storyboard; sourceTree = "<group>"; };
 		9985464B38C3FFC83D568727 /* Pods_PresentrExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PresentrExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37B2AC285D84D58CC7D5CA3 /* Pods-PresentrExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PresentrExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PresentrExample/Pods-PresentrExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +113,8 @@
 				06A1F0BA1CF3D17E0057C79B /* Assets.xcassets */,
 				06A1F0BC1CF3D17E0057C79B /* LaunchScreen.storyboard */,
 				06A1F0BF1CF3D17E0057C79B /* Info.plist */,
+				37F9F7831FEA256E0020C753 /* DynamicSizeViewController.swift */,
+				37F9F7851FEA25940020C753 /* dynamic.storyboard */,
 			);
 			path = PresentrExample;
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 			files = (
 				06A1F0BE1CF3D17E0057C79B /* LaunchScreen.storyboard in Resources */,
 				06A1F0BB1CF3D17E0057C79B /* Assets.xcassets in Resources */,
+				37F9F7861FEA25940020C753 /* dynamic.storyboard in Resources */,
 				06A1F0B91CF3D17E0057C79B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +274,7 @@
 				069265851DD12CF400B67915 /* ExampleTableViewCell.swift in Sources */,
 				06A1F0B41CF3D17E0057C79B /* AppDelegate.swift in Sources */,
 				0644CEC11DADCD02002E586F /* PopupViewController.swift in Sources */,
+				37F9F7841FEA256E0020C753 /* DynamicSizeViewController.swift in Sources */,
 				068A1D081E13212000883454 /* CustomAnimation.swift in Sources */,
 				063675201E81D8A9005D5B9C /* DynamicViewController.swift in Sources */,
 				0625015B1E80624400574FF2 /* SplitViewController.swift in Sources */,

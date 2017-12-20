@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dynamic Size View Controller-->
+        <scene sceneID="l96-Ws-76e">
+            <objects>
+                <viewController storyboardIdentifier="DynamicSizeViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b86-XJ-n8H" customClass="DynamicSizeViewController" customModule="PresentrExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P0O-YR-8Nt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srt-0B-MX7">
+                                <rect key="frame" x="0.0" y="392" width="375" height="275"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-JG-u5i">
+                                        <rect key="frame" x="32" y="50" width="311" height="189"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="This request will be incinerated and the recipient will no longer be able to view or fulfil it type of message." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CJ-gL-npt">
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zBB-Pt-gaU">
+                                                <rect key="frame" x="0.0" y="85" width="311" height="104"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpo-BM-g9Q">
+                                                        <rect key="frame" x="0.0" y="0.0" width="311" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="gQm-KH-oPi"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnm-1r-Y8J">
+                                                        <rect key="frame" x="0.0" y="56" width="311" height="48"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Apk-JG-u5i" firstAttribute="leading" secondItem="srt-0B-MX7" secondAttribute="leading" constant="32" id="95D-V8-xD4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Apk-JG-u5i" secondAttribute="trailing" constant="32" id="Qk1-hV-zpM"/>
+                                    <constraint firstItem="Apk-JG-u5i" firstAttribute="top" secondItem="srt-0B-MX7" secondAttribute="top" constant="50" id="wEW-4I-gTD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fRH-ia-6L1" firstAttribute="bottom" secondItem="Apk-JG-u5i" secondAttribute="bottom" constant="36" id="77L-lp-6qF"/>
+                            <constraint firstAttribute="bottom" secondItem="srt-0B-MX7" secondAttribute="bottom" id="Dyk-Nu-rp5"/>
+                            <constraint firstAttribute="trailing" secondItem="srt-0B-MX7" secondAttribute="trailing" id="LpN-7k-wHP"/>
+                            <constraint firstItem="srt-0B-MX7" firstAttribute="leading" secondItem="P0O-YR-8Nt" secondAttribute="leading" id="dCw-CA-n7b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fRH-ia-6L1"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="actionStackView" destination="zBB-Pt-gaU" id="T8P-m4-RBK"/>
+                        <outlet property="containerView" destination="srt-0B-MX7" id="XMy-F5-y41"/>
+                        <outlet property="messageLabel" destination="2CJ-gL-npt" id="gYg-jY-7Ry"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rcu-qY-i0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="172"/>
+        </scene>
+    </scenes>
+</document>
